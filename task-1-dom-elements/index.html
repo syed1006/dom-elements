@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom elements</title>
+</head>
+<body>
+    <main id="main">
+        This is main
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae exercitationem ullam placeat libero, amet nulla mollitia, doloribus quos debitis asperiores, ipsa vel deserunt saepe error. Molestiae animi aliquam dignissimos?</div>
+        <!-- this is to understand the different elements in html -->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos, necessitatibus vel eius maiores in quod aliquam perferendis ut ipsa sunt facilis corporis, exercitationem doloremque temporibus neque, est numquam doloribus?</p>
+    </main>
+    <ul id="childs"></ul>
+    <script>
+        const main = document.getElementById('main');
+        const list = main.childNodes;
+        // const list = main.children;
+        const ultag = document.getElementById('childs')
+        for(let i = 0; i < list.length; i++){
+            let li = document.createElement('li');
+            li.classList.add('list-item');
+            li.innerText = list[i].nodeName;
+            ultag.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
